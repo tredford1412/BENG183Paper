@@ -30,13 +30,38 @@ rule example:
   input:
     "data.gz"
   output:
-    "data/"
+    directory("data/")
   shell:
-    "pigz -d {input} > {output}"
+    """
+    mkdir -p {output}
+    pigz -d {input} > {output}
+    """
 ```
 
 In Snakemake, rule are typically assigned an name (`Example`), an input (`data.gz`), an output (`data/`), and a shell.
 
 Here, our shell is written as `pigz -d {input} > {output}`.
 The `pigz -d` command will decompress a file with the `.gz ` ending.
-The `{input}` and `{output}` in the shell command are variables respresenting the defined inputs and outputs. This means that the shell command will take the `data.gz` file and decompress it into the `data/` directory.
+The `{input}` and `{output}` in the shell command are variables respresenting the defined inputs and outputs. This means that the shell command will take the `data.gz` file and decompress it into the `data/` directory. Additionally, while shell uses terminal commands, you can replace `shell:` with `run:` to use Python code instead.
+
+While this workflow performs the operation correctly, it has potential to be far more useful.
+
+## Wildcards
+
+Wildcards are a fundamental part of Snakemake. They allow for the generalization of rules to fit a variety of inputs/outputs. For example, we can expand the rule above using wildcards. This would then look like:
+
+```python
+rule example_with_wc:
+  input:
+    "{data}.gz"
+  output:
+    directory("{data}/")
+  shell:
+    """
+    mkdir -p {output}
+    pigz -d {input} > {output}
+    """
+```
+    
+      
+      
