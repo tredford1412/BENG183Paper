@@ -20,3 +20,23 @@ In summary, Snakemake transforms data analysis by promoting reproducibility, min
 |Integration with Tools and Services | Snakemake integrates seamlessly with tools and systems, supporting containerization with Docker and Singularity for portability and consistent dependencies. It efficiently submits jobs to HPC clusters or cloud platforms like AWS and adapts to schedulers like SLURM. With Git integration for version control, compatibility with tools like STAR and R, and notification features via Slack or email, Snakemake ensures versatile and reproducible workflow management.|
 |Scalable     | Snakemake is highly scalable, supporting workflows from small, local setups to massive computations. It automatically parallelizes tasks by detecting independent dependencies and effectively utilizing available CPU cores. With cluster support, Snakemake optimizes job scheduling based on resource requirements, ensuring efficient execution without overloading systems. It also dynamically adjusts resource allocation during execution and supports cloud platforms, enabling researchers to leverage scalable computational resources as needed.             | 
 
+# Writing a Snakemake Workflow
+
+To write a Snakemake workflow, you first must create a Snakefile. This is the file where the workflow will be defined. Workflows are written in terms of rules, where each rule performs a specific task or operation.
+A basic rule would look like this:
+
+```python
+rule example:
+  input:
+    "data.gz"
+  output:
+    "data/"
+  shell:
+    "pigz -d {input} > {output}"
+```
+
+In Snakemake, rule are typically assigned an name (`Example`), an input (`data.gz`), an output (`data/`), and a shell.
+
+Here, our shell is written as `pigz -d {input} > {output}`.
+The `pigz -d` command will decompress a file with the `.gz ` ending.
+The `{input}` and `{output}` in the shell command are variables respresenting the defined inputs and outputs. This means that the shell command will take the `data.gz` file and decompress it into the `data/` directory.
