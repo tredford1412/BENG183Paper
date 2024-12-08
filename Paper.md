@@ -13,7 +13,7 @@ In summary, Snakemake transforms data analysis by promoting reproducibility, min
 
 # Key Features of Snakemake 
 
-|Key Feature| Sunmmary|    
+|Key Feature| Summary|    
 |-----------|:----------------:|
 |Python-like Syntax                  | Snakemake workflows are written in a Python-based syntax, making them easy to learn, especially for those familiar with Python, while remaining beginner-friendly due to their readability. The syntax is both flexible and extendable, allowing users to integrate custom logic and Python functions directly into workflows, enabling dynamic adaptation to varying datasets. Its declarative structure ensures workflows are clear, easy to understand, and maintainable, with rules that explicitly define inputs, outputs, and commands.          |
 |Workflow Nesting    | Snakemake supports modular workflow design through workflow nesting, allowing complex pipelines to be broken into smaller, manageable sub-workflows that can operate independently or as part of a larger system. This promotes reusability, as sub-workflows can be easily imported and reused across different projects, such as for common preprocessing steps. Workflow nesting also facilitates collaborative development by enabling teams or individuals to work on specific parts of the workflow while seamlessly integrating their contributions.          | 
