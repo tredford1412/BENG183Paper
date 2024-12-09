@@ -94,3 +94,8 @@ The `expand() ` takes the target files / files with a variable placeholder (note
 
 To chain multiple rules together in a workflow, Snakemake examines the input and outputs of each rule to determine which rules have "dependencies" (ie. which rules depend on the outputs of others). These dependencies can be modeled with a directed acyclic graph. A directed acyclic graph is a "directed graph that has no cycles". 
 ![Directed Acyclic Graph][
+
+# Integration
+
+Snakemake integrates seamlessly into various computational environments to enhance workflow efficiency and portability. It supports Conda integration, allowing users to define isolated environments for each workflow step, ensuring reproducibility and compatibility across systems. With HPC and cloud integration, Snakemake can run workflows on HPC clusters like SLURM or cloud platforms such as AWS, enabling scalability and efficient resource utilization. Additionally, its modularity with Snakedeploy allows users to easily deploy and adapt pre-built workflows from repositories, making it straightforward to reuse and customize workflows for specific needs.
+
