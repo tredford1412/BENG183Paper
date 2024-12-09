@@ -74,7 +74,7 @@ datasets= glob_wildcards("{data}.gz").data
 
 rule all:
   input:
-    expand({data/}, data=datasets)
+    expand("{data}/", data=datasets)
   
 rule example_with_wc:
   input:
@@ -87,3 +87,5 @@ rule example_with_wc:
     pigz -d {input} > {output}
     """
 ```
+This workflow will perform the same as the previous workflow, but this new workflow showcases an interesting feature of Snakemake. 
+The `expand() ` takes the target files / files with a variable placeholder (note that the `{data}` in the input of the all rule is NOT a wildcard) and provides each output based on the set provided. In this case, we create a dictionary using `glob_wildcards` to take any file in the working directory with the `.gz` ending. This dictionary is named `datasets` and is specified to be used by the `data=datasets`. 
