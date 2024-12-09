@@ -108,6 +108,10 @@ To chain multiple rules together in a workflow, Snakemake examines the input and
 
 Snakemake integrates seamlessly into various computational environments to enhance workflow efficiency and portability. It supports Conda integration, allowing users to define isolated environments for each workflow step, ensuring reproducibility and compatibility across systems. With HPC and cloud integration, Snakemake can run workflows on HPC clusters like SLURM or cloud platforms such as AWS, enabling scalability and efficient resource utilization. Additionally, its modularity with Snakedeploy allows users to easily deploy and adapt pre-built workflows from repositories, making it straightforward to reuse and customize workflows for specific needs.
 
+# Scalable 
+
+Snakemake is highly scalable, making it suitable for workflows of any size. It automatically parallelizes tasks by running independent steps simultaneously, maximizing the use of available computational resources. Users can also specify the resources needed for each rule, such as memory, CPU cores, or runtime, ensuring efficient resource management and preventing system overload. Additionally, Snakemake includes a checkpointing feature that allows workflows to restart from where they stopped in case of interruptions, saving time and ensuring seamless execution. These capabilities make Snakemake an ideal choice for both small-scale projects and large, resource-intensive workflows.
+
 # How is Snakemake used at UCSD?
 
 At UCSD, Professor Zhong's lab uses Snakemake as the workflow management system for **MUSIC**, a bioinformatics tool designed to analyze specific types of biological data. Snakemake ensures that MUSIC's workflows are efficient, reproducible, and easy to manage by automating tasks, handling dependencies, and streamlining complex data analyses. This integration allows researchers in the lab to focus on scientific insights rather than the logistical challenges of managing computational pipelines.
