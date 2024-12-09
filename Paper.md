@@ -13,7 +13,7 @@ Collaboration is made easier with Snakemake's declarative workflows, which enabl
 In summary, Snakemake transforms data analysis by promoting reproducibility, minimizing manual errors, and streamlining processes across diverse computational environments. Its profound impact spans fields like bioinformatics and machine learning, improving the quality, transparency, and efficiency of research.
 
 # How to Use Snakemake 
-![Snakemakepic2](Snakemakepic2.png)
+![Snakemakepic2](Snakemake2.png)
 1. Install Snakemake via Conda
 2. Create a workflow directory
 3. Implement a workflow in the snakemake file (Snakefile)
