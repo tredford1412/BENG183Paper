@@ -101,8 +101,11 @@ The `expand() ` takes the target files / files with a variable placeholder (note
 
 # Basic Functionality
 
-To chain multiple rules together in a workflow, Snakemake examines the input and outputs of each rule to determine which rules have "dependencies" (ie. which rules depend on the outputs of others). These dependencies can be modeled with a directed acyclic graph. A directed acyclic graph is a "directed graph that has no cycles". 
-![Directed Acyclic Graph][
+To chain multiple rules together in a workflow, Snakemake examines the input and outputs of each rule to determine which rules have "dependencies" (ie. which rules depend on the outputs of others). These dependencies can be modeled with a directed acyclic graph. A directed acyclic graph (DAG) is a "directed graph that has no cycles". In terms of Snakemake, each node represents a rule and each edge represents a dependency between two rules, where an edge leaving the node represents the output of the rule and a edge leading in to the node represents an input to that rule. 
+
+![Directed Acyclic Graph](graph.png)
+
+For a graph such as the one above, we can see that rule 6 is the only node with no outbound edges, meaning that it must be the target rule. The only edge leading to it comes from 5, meaning that rule 6 is dependent on the output of rule 5.
 
 # Integration
 
