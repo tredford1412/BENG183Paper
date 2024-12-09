@@ -1,6 +1,7 @@
 # Snakemake
 Hugh (Trevor) Redford, Noah Skinner, and Yifei Ding
 
+![Snakemakelog0](Snakemakelogo.png)
 # What is Snakemake
 Before we begin, it is crucial to learn what Snakemake does. Snakemake is a workflow management system designed to produce reproducible data analyses that is highly adaptable with powerful tools for generalization. 
 
