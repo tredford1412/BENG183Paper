@@ -89,3 +89,8 @@ rule example_with_wc:
 ```
 This workflow will perform the same as the previous workflow, but this new workflow showcases an interesting feature of Snakemake. 
 The `expand() ` takes the target files / files with a variable placeholder (note that the `{data}` in the input of the all rule is NOT a wildcard) and provides each output based on the set provided. In this case, we create a dictionary using `glob_wildcards` to take any file in the working directory with the `.gz` ending. This dictionary is named `datasets` and is specified to be used by the `data=datasets`. 
+
+# Basic Functionality
+
+To chain multiple rules together in a workflow, Snakemake examines the input and outputs of each rule to determine which rules have "dependencies" (ie. which rules depend on the outputs of others). These dependencies can be modeled with a directed acyclic graph. A directed acyclic graph is a "directed graph that has no cycles". 
+![Directed Acyclic Graph][
