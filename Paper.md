@@ -13,7 +13,7 @@ Collaboration is made easier with Snakemake's declarative workflows, which enabl
 In summary, Snakemake transforms data analysis by promoting reproducibility, minimizing manual errors, and streamlining processes across diverse computational environments. Its profound impact spans fields like bioinformatics and machine learning, improving the quality, transparency, and efficiency of research.
 
 # How to Use Snakemake 
-
+![Snakemakepic2](Snakemakepic2.png)
 1. Install Snakemake via Conda
 2. Create a workflow directory
 3. Implement a workflow in the snakemake file (Snakefile)
@@ -120,6 +120,10 @@ Snakemake is highly scalable, making it suitable for workflows of any size. It a
 
 At UCSD, Professor Zhong's lab uses Snakemake as the workflow management system for **MUSIC**, a bioinformatics tool designed to analyze specific types of biological data. Snakemake ensures that MUSIC's workflows are efficient, reproducible, and easy to manage by automating tasks, handling dependencies, and streamlining complex data analyses. This integration allows researchers in the lab to focus on scientific insights rather than the logistical challenges of managing computational pipelines.
 
+
+
 # Significance of Music 
 
 MUSIC is a powerful tool for analyzing molecular interactions, such as DNA-DNA, RNA-DNA, and RNA-RNA. What makes it stand out is its ability to incorporate factors like sex, age, and genetics into a joint analysis, offering deeper insights into chromatin and RNA interactions. To handle these workflows efficiently, Snakemake comes into play. It automates and scales the process, ensuring reproducibility and managing complex tasks seamlessly. Together, they create a robust framework for exploring the intricate relationships in human genetics and aging.
+
+![MUSIC workflow](MUSIC.png)
