@@ -62,6 +62,28 @@ rule example_with_wc:
     pigz -d {input} > {output}
     """
 ```
-    
+
+If we were to have the files `set_one.gz`, `set_two.gz`, and `set_three.gz`, running the workflow with this new wildcard functionality would yield the `set_one/`, `set_two/` , and `set_three/` directories.
+
+## The All rule
+
+According to the Snakemake documentation, "Snakemake always wants to execute the first rule in the snakefile". This allows for the use of the all rule. The all rule signals Snakemake that this is the target rule. This works regardless of the position of the rule in the workflow. With regards to the previous workflow, it could be written using an all rule. 
       
-      
+```python
+datasets= glob_wildcards("{data}.gz").data
+
+rule all:
+  input:
+    expand({data/}, data=datasets)
+  
+rule example_with_wc:
+  input:
+    "{data}.gz"
+  output:
+    directory("{data}/")
+  shell:
+    """
+    mkdir -p {output}
+    pigz -d {input} > {output}
+    """
+```
