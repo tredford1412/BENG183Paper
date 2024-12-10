@@ -30,7 +30,7 @@ Snakemake is a workflow management system designed to produce reproducible data 
 ## Background
 Snakemake is utilized a lot in bioinformatics. It significantly enhances research efficiency by allowing researchers to focus on data analysis and interpretation rather than managing complex workflows or troubleshooting dependency issues. By automating repetitive tasks, it reduces the time and effort required to conduct analyses. It also ensures data integrity and accuracy through clear documentation of inputs, outputs, and steps, which enhances transparency and trust in the results. Additionally, Snakemake only re-runs affected tasks when changes occur, ensuring consistent and reliable outputs.
 
-Collaboration is made easier with Snakemake's declarative workflows, which enable researchers from different institutions or disciplines to share and run identical workflows, fostering interdisciplinary research. This also supports open science by lowering barriers to entry for less experienced users, democratizing access to powerful data analysis tools. Moreover, Snakemake optimizes resource allocation and avoids unnecessary computations, reducing the environmental footprint of large-scale analyses.
+Collaboration is made easier with Snakemake's declarative workflows, which enable researchers from different institutions or disciplines to share and run identical workflows, fostering interdisciplinary research. This also supports open science by lowering barriers to entry for less experienced users, democratizing access to powerful data analysis tools. Snakemake optimizes resource allocation and avoids unnecessary computations, reducing the environmental footprint of large-scale analyses.
 
 In summary, Snakemake transforms data analysis by promoting reproducibility, minimizing manual errors, and streamlining processes across diverse computational environments. Its profound impact spans fields like bioinformatics and machine learning, improving the quality, transparency, and efficiency of research.
 
@@ -139,7 +139,7 @@ Supported integrations:
 
 ### Scalable 
 
-Snakemake is highly scalable, making it suitable for workflows of any size. It automatically parallelizes tasks by running independent steps simultaneously, maximizing the use of available computational resources. Users can also specify the resources needed for each rule, such as memory, CPU cores, or runtime, ensuring efficient resource management and preventing system overload. Additionally, Snakemake includes a checkpointing feature that allows workflows to restart from where they stopped in case of interruptions, saving time and ensuring seamless execution. These capabilities make Snakemake an ideal choice for both small-scale projects and large, resource-intensive workflows.
+Snakemake is highly scalable, making it suitable for workflows of any size. It automatically parallelizes tasks by running independent steps simultaneously, maximizing the use of available computational resources. Users can also specify the resources needed for each rule, such as memory, CPU cores, or runtime, ensuring efficient resource management and preventing system overload. Also, Snakemake includes a checkpointing feature that allows workflows to restart from where they stopped in case of interruptions, saving time and ensuring seamless execution. These capabilities make Snakemake an ideal choice for both small-scale projects and large, resource-intensive workflows.
 
 
 ## Writing a Snakemake Workflow
@@ -217,7 +217,7 @@ The `expand() ` takes the target files / files with a variable placeholder (note
 
 ## How is Snakemake used at UCSD?
 
-At UCSD, Professor Zhong's lab uses Snakemake as the workflow management system for **MUSIC**, a bioinformatics tool designed to analyze specific types of biological data. Snakemake ensures that MUSIC's workflows are efficient, reproducible, and easy to manage by automating tasks, handling dependencies, and streamlining complex data analyses. This integration allows researchers in the lab to focus on scientific insights rather than the logistical challenges of managing computational pipelines.
+At UCSD, Professor Zhong's lab uses Snakemake as the workflow management system for MUSIC, a bioinformatics tool designed to analyze specific types of biological data. Snakemake ensures that MUSIC's workflows are efficient, reproducible, and easy to manage by automating tasks, handling dependencies, and streamlining complex data analyses. This integration allows researchers in the lab to focus on scientific insights rather than the logistical challenges of managing computational pipelines.
 
 ### Significance of Music 
 
