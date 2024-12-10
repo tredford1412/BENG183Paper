@@ -238,3 +238,6 @@ By promoting transparency, adaptability, and reproducibility, Snakemake has beco
 2. [Snakemake | Snakemake 8.25.5 documentation. (n.d.)](https://snakemake.readthedocs.io/en/stable/)
 
 3. [Zhong-Lab-Ucsd. (n.d.). *GitHub - Zhong-Lab-UCSD/MUSIC-Tools*. GitHub.](https://github.com/Zhong-Lab-UCSD/MUSIC-tools)
+
+4. [Wikimedia Foundation. (2024, December 6). Directed acyclic graph. Wikipedia.](https://en.wikipedia.org/wiki/Directed_acyclic_graph#:~:text=A%20directed%20acyclic%20graph%20is,a%20path%20with%20zero%20edges). 
+   
